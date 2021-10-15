@@ -69,5 +69,19 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "main": "src/main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Limmperhaven/testprojectfortrueconf.git"
+  },
+  "keywords": [
+    "trueconf",
+    "test"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Limmperhaven/testprojectfortrueconf/issues"
+  },
+  "homepage": "https://github.com/Limmperhaven/testprojectfortrueconf#readme"
 }
