@@ -2,7 +2,7 @@
 
 ``` bash
 # установка
-npm install
+npm install https://github.com/Limmperhaven/testprojectfortrueconf
 
 # запуск локального сервера
 npm run dev
