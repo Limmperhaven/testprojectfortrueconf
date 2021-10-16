@@ -1,13 +1,13 @@
 <template>
   <div class="tlights">
-    <div id="green" :class="[{ active__green: isActiveGreen }, {light__blinking: blinking && isActiveGreen}]">
-      <span class="tspan" :class="{ active__span: isActiveGreen }">{{timerValue}}</span>
+    <div id="green" class="tlights__item" :class="[{ tlights__green_active: isActiveGreen }, {tlights_blinking: blinking && isActiveGreen}]">
+      <span class="tlights__span" :class="{ tlights__span_active: isActiveGreen }">{{timerValue}}</span>
     </div>
-    <div id="yellow" :class="[{ active__yellow: isActiveYellow }, {light__blinking: blinking && isActiveYellow}]">
-      <span class="tspan" :class="{ active__span: isActiveYellow }">{{timerValue}}</span>
+    <div id="yellow" class="tlights__item" :class="[{ tlights__yellow_active: isActiveYellow }, {tlights_blinking: blinking && isActiveYellow}]">
+      <span class="tlights__span" :class="{ tlights__span_active: isActiveYellow }">{{timerValue}}</span>
     </div>
-    <div id="red" :class="[{ active__red: isActiveRed }, {light__blinking: blinking && isActiveRed}]">
-      <span class="tspan" :class="{ active__span: isActiveRed }">{{timerValue}}</span>
+    <div id="red" class="tlights__item" :class="[{ tlights__red_active: isActiveRed }, {tlights_blinking: blinking && isActiveRed}]">
+      <span class="tlights__span" :class="{ tlights__span_active: isActiveRed }">{{timerValue}}</span>
     </div>
   </div>
 </template>
@@ -63,7 +63,7 @@ export default {
   justify-content: space-between;
   border-radius: 75px;
 }
-.tlights div {
+.tlights__item {
   border-radius: 50%;
   height: 350px;
   width: 350px;
@@ -71,14 +71,14 @@ export default {
   display: flex;
   align-items: center;
 }
-.tspan {
+.tlights__span {
   margin: 0 auto;
   text-align: center;
   font-size: 75px;
   letter-spacing: 0.1em;
   display: none;
 }
-.light__blinking {
+.tlights_blinking {
   animation: blink 0.5s infinite alternate;
 }
 #green {
@@ -93,16 +93,16 @@ export default {
   background: rgba(255, 0, 0, 0.5);
   color: white;
 }
-.active__green {
+.tlights__green_active {
   background: green;
 }
-.active__yellow {
+.tlights__yellow_active {
   background: yellow;
 }
-.active__red {
+.tlights__red_active {
   background: red;
 }
-.active__span {
+.tlights__span_active {
   display: block;
 }
 @keyframes blink {
